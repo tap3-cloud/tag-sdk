@@ -1,0 +1,13 @@
+# TS generated files:
+packages/**/*.d.ts
+packages/**/*.js
+.nyc_output
+
+# Ignore artifacts:
+build
+coverage
+node_modules
+dist
+deps
+pnpm-lock.yaml
+postman/*

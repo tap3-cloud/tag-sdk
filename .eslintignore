@@ -1,0 +1,10 @@
+**/node_modules/
+**/dist/
+**/build/
+**/tmp/
+**/deps/
+docs/
+postman/
+.eslintrc.cjs
+.eslintrc.js
+.eslintrc.json

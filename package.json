@@ -1,0 +1,31 @@
+{
+  "name": "root",
+  "private": true,
+  "engines": {
+    "node": ">=20.x"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@9.12.2",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "eslint": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.vue,.astro",
+    "prepare": "husky install"
+  },
+  "repository": "github:tap3-cloud/tag-sdk",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "prettier": ">= 3"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "typescript": "^5.6.3",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3"
+  }
+}
