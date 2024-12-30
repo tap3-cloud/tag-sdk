@@ -4,10 +4,17 @@ packages/**/*.js
 .nyc_output
 
 # Ignore artifacts:
-build
-coverage
-node_modules
-dist
-deps
-pnpm-lock.yaml
+**/*/build
+**/*/coverage
+**/*/node_modules
+**/*/dist
+**/*/deps
+**/*/target
+
+# ignore lock files
+**/*-lock.yaml
+package-lock.json
+
+**/CHANGELOG.md
 postman/*
+dev-dist

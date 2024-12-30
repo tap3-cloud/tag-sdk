@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": false
+  },
+  "include": ["packages/*"],
+  "exclude": [
+    "node_modules",
+    "**/deps/*",
+    "**/dist/*",
+    "**/coverage/*",
+    "**/build/*",
+    "**/public/*"
+  ]
+}

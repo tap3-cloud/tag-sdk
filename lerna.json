@@ -1,0 +1,5 @@
+{
+  "version": "0.1.0-alpha.0",
+  "packages": ["packages/*", "docs", "!packages/_examples"],
+  "npmClient": "pnpm"
+}
