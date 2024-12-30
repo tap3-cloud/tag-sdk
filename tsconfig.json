@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ESNext",
+    "module": "commonjs",
+    "target": "ES2020",
     "outDir": "dist",
     "baseUrl": ".",
     "moduleResolution": "node",
@@ -10,7 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": false
   },
-  "include": ["packages/*"],
+  "include": ["packages/**/*"],
   "exclude": [
     "node_modules",
     "**/deps/*",

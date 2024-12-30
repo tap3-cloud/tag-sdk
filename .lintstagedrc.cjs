@@ -3,6 +3,6 @@ module.exports = {
   // Run ESLint on changes to JavaScript/TypeScript files
   '*.{js,ts,tsx,jsx,vue,astro}': [
     'prettier --write .',
-    'eslint --fix . --ext .js,.jsx,.ts,.tsx,.vue,.astro --max-warnings 0',
+    'eslint --fix . --max-warnings 0',
   ],
 }

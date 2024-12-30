@@ -12,7 +12,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "eslint": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.vue,.astro",
+    "eslint": "eslint --fix . --max-warnings 0",
     "prettier-check": "npx prettier --check --cache .",
     "prettier": "npx prettier --write --cache ."
   },
@@ -25,6 +25,7 @@
     "@changesets/cli": "^2.27.11",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/eslintrc": "^3.2.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "concurrently": "^9.1.1",
     "cross-env": "^7.0.3",
@@ -35,6 +36,7 @@
     "lint-staged": "^15.3.0",
     "only-allow": "^1.2.1",
     "prettier": "^3.4.2",
+    "ts-node": "10.9.2",
     "turbo": "^2.3.3",
     "typedoc": "^0.27.6",
     "typescript": "^5.7.2",
