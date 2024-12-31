@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: ['src/index.ts'],
@@ -19,4 +19,4 @@ export default defineConfig({
     'https',
     // Add other modules you want to externalize
   ],
-});
+})

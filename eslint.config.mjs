@@ -49,7 +49,7 @@ export default [
     ],
     rules: {
       '@stylistic/indent': ['error', 2],
-      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/semi': ['error', 'never'],
       '@stylistic/no-tabs': 'error',
       '@stylistic/member-delimiter-style': [
         'error',
