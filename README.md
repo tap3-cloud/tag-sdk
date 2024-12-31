@@ -1,3 +1,3 @@
-# Tap3 Client SDK for Web Browsers
+# Tap3 - The next generation of crypto-driven programmatical and interactive web NFC solution
 
-Client SDK for programmatically interacting with Tap3 Tags from web browser
+This is the main repository for the client SDK of Tap3.
