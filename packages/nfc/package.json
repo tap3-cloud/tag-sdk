@@ -1,0 +1,23 @@
+{
+  "name": "@tap3-cloud/nfc",
+  "version": "0.1.0",
+  "description": "Core package for Tap3 Cloud",
+  "main": "dist/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --format esm --dts",
+    "lint": "eslint --fix  --cache .",
+    "watch": "tsc --watch",
+    "dev": "tsup --format esm --dts --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tslib": "2.8.1",
+    "tsup": "^8.3.5"
+  },
+  "dependencies": {}
+}
