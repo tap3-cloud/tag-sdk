@@ -19,5 +19,7 @@
     "tslib": "2.8.1",
     "tsup": "^8.3.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "buffer": "^6.0.3"
+  }
 }
