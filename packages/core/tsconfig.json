@@ -19,8 +19,7 @@
     "checkJs": false,
     "noEmitOnError": false,
     "moduleDetection": "force",
-    "allowArbitraryExtensions": true,
-    "typeRoots": ["./node_modules/@types"]
+    "allowArbitraryExtensions": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
