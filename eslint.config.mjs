@@ -1,4 +1,5 @@
 import StylisticPlugin from '@stylistic/eslint-plugin'
+import parserTs from '@typescript-eslint/parser'
 import vitest from '@vitest/eslint-plugin' // Add Vitest plugin
 // import { FlatCompat } from '@eslint/eslintrc'
 
@@ -21,6 +22,14 @@ export default [
       '**/*.astro',
     ],
     languageOptions: {
+      parser: parserTs,
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: {
         // Add Node.js globals
         NodeJS: 'readonly',
