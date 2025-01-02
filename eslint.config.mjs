@@ -13,14 +13,7 @@ export default [
     plugins: {
       stylistic: StylisticPlugin,
     },
-    files: [
-      '**/*.js',
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.jsx',
-      '**/*.vue',
-      '**/*.astro',
-    ],
+    files: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.jsx'],
     languageOptions: {
       parser: parserTs,
       parserOptions: {
