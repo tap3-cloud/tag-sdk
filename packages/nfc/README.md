@@ -1,4 +1,6 @@
 # NFC 链接库参考资料
 
-反编译 st25sdk-TAE-1.10.2.jar
-<https://www.shenmeapp.com/files/327f01953647709ab62713eaaa85fd51>
+NFC Forum: <https://nfc-forum.org/build/specifications>
+Web-NFC: <https://w3c.github.io/web-nfc/> & <https://github.com/w3c/web-nfc/blob/gh-pages/web-nfc.d.ts>
+Chrome Web NFC Guide: <https://web.dev/nfc/>
+Wx 小程序 NFC: <https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NFCAdapter.html>
