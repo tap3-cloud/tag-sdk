@@ -13,14 +13,11 @@
 
 <script>
   async function checkMethod() {
-    try {
-      // @ts-expect-error
-      new window.NDEFReader()
-    } catch (e) {
-      // WebNFC not supported
+    if ('NDEFReader' in window) {
+      return 'webnfc'
+    } else {
       return 'credential'
     }
-    return 'webnfc'
   }
 
   /**
@@ -29,8 +26,7 @@
   async function checkWebNFCPermission() {
     try {
       const controller = new AbortController()
-      // @ts-expect-error
-      const ndef = new window.NDEFReader() as NDEFReader
+      const ndef = new NDEFReader() as NDEFReader
       await ndef.scan({ signal: controller.signal })
       controller.abort()
       return true
