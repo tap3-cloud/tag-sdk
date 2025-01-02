@@ -5,4 +5,82 @@
 <div id="container">
   <h1>Hello, World!</h1>
   <p>Welcome to Tap3 Cloud.</p>
+  <div>
+    Messages:
+    <p id="messages"></p>
+  </div>
 </div>
+
+<script>
+  async function checkMethod() {
+    try {
+      // @ts-expect-error
+      new window.NDEFReader()
+    } catch (e) {
+      // WebNFC not supported
+      return 'credential'
+    }
+    return 'webnfc'
+  }
+
+  /**
+   * Check if user has granted us permission to use WebNFC interface.
+   */
+  async function checkWebNFCPermission() {
+    try {
+      const controller = new AbortController()
+      // @ts-expect-error
+      const ndef = new window.NDEFReader() as NDEFReader
+      await ndef.scan({ signal: controller.signal })
+      controller.abort()
+      return true
+    } catch (e: any) {
+      if (e.name === 'NotAllowedError') {
+        return false
+      }
+
+      throw e
+    }
+  }
+
+  const container = document.getElementById('container')
+  if (!container) {
+    throw new Error('Container not found')
+  }
+  container.style.backgroundColor = 'lightblue'
+  container.style.padding = '1rem'
+
+  async function checkAndReadNFC() {
+    const messages = document.getElementById('messages')
+    if (!messages) {
+      throw new Error('Messages not found')
+    }
+    const supportedMethod = await checkMethod()
+    // Use Web NFC API to read NFC tags
+    if (supportedMethod === 'webnfc') {
+      // display a message if the browser supports the Web NFC API
+      messages.innerHTML = 'Web NFC API is supported in this browser.'
+
+      // const reader = new NDEFReader()
+      // reader.scan().then(() => {
+      //   reader.onreading = event => {
+      //     for (const record of event.message.records) {
+      //       console.log('Record type: ', record.recordType)
+      //       console.log('MIME type: ', record.mediaType)
+      //       console.log('Data: ', record.data)
+      //     }
+      //   }
+      // }).catch(error => {
+      //   console.error('Error reading NFC tag: ', error)
+      // })
+    } else {
+      // display a message if the browser does not support the Web NFC API
+      messages.innerHTML = 'Web NFC API is not supported in this browser.'
+    }
+  }
+
+  // on page load, check if the browser supports the Web NFC API
+  window.addEventListener('load', async () => {
+    await checkAndReadNFC()
+  })
+</script>
